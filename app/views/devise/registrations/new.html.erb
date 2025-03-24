@@ -25,7 +25,12 @@
 
         <div class="mb-4">
           <%= f.label :password_confirmation, class: "block text-sm font-medium text-gray-700" %>
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm", placeholder: "Confirm password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm", placeholder: "Confirm password" %>
+        </div>
+
+        <div class="mb-4">
+          <%= f.label :role, class: "block text-sm font-medium text-gray-700" %>
+          <%= f.select :role, User.roles.keys.reject { |role| role == "admin" }, {}, class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 <div data-controller="map" style="height: 500px; width: 100%;"></div>
 
-<% if current_user.admin? %>
+<% if current_user.role_admin? %>
   <%= link_to "Water Usage Report", reports_water_usage_path(format: :pdf), class: "btn btn-primary" %>
   <%= link_to "Maintenance History", reports_maintenance_path, class: "btn btn-secondary" %>
 <% end %>
