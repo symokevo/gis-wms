@@ -1,0 +1,4 @@
+:schedule:
+  leak_detection:
+    cron: "*/5 * * * *" # Every 5 minutes
+    class: "LeakDetectionJob"
